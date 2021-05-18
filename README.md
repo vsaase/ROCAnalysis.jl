@@ -31,8 +31,8 @@ An [annotated jupyter notebook](ROCAnalysis.ipynb) of the code below can be foun
 ```julia
 using ROCAnalysis
 ## Produce some well-calibrated log-likelihood-ratio scores for target and non-target class:
-tar =  2 + 2randn(1000)
-non = -2 + 2randn(100000)
+tar =  2 .+ 2randn(1000)
+non = -2 .+ 2randn(100000)
 ## quick estimate of equal error rate, should be close to pnorm(-1) = 0.5 + 0.5erf(-1/√2)
 eer(tar, non) 
 ## compute full ROC statistics
